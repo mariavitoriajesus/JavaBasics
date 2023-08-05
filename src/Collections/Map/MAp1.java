@@ -45,7 +45,7 @@ public class MAp1 {
         Map<String, Integer> populacaoEstadosNE3 = new TreeMap<>(populacaoEstadosNE);
         System.out.println(populacaoEstadosNE3);
 
-        Collections<Integer> populacao = populacaoEstadosNE.values();
+        Map<Integer> populacao = populacaoEstadosNE.values();
         String estadoMaiorPopulacao = "";
         String estadoMenorPopulacao = "";
         for (Map.Entry<String, Integer> entry : populacaoEstadosNE.entrySet()) {

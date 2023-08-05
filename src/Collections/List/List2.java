@@ -25,29 +25,24 @@ public class List2 {
 
         System.out.println("Perguntas: ");
         System.out.print("\nTelefonou para a vítima? ");
-        String respostas = scanner.next();
-        respostas.add(respostas.toLowerCase());
+        respostas.add(scanner.nextLine().toLowerCase());
 
         System.out.print("Esteve no local do crime? ");
-        respostas = scanner.next();
-        respostas.add(respostas.toLowerCase());
+        respostas.add(scanner.nextLine().toLowerCase());
 
         System.out.print("Mora perto da vítima? ");
-        respostas = scanner.next();
-        respostas.add(respostas.toLowerCase());
+        respostas.add(scanner.nextLine().toLowerCase());
 
         System.out.print("Devia para a vítima? ");
-        respostas = scanner.next();
-        respostas.add(respostas.toLowerCase());
+        respostas.add(scanner.nextLine().toLowerCase());
 
         System.out.print("Já trabalhou com a vítima? ");
-        respostas = scanner.next();
-        respostas.add(respostas.toLowerCase());
+        respostas.add(scanner.nextLine().toLowerCase());
 
         System.out.println(respostas);
 
         int cont = 0;
-        Iterator<String> contador = respostas.lines().iterator();
+        Iterator<String> contador = respostas.iterator();
         while (contador.hasNext()) {
             String resp = contador.next();
             if (resp.contains("s")) {
