@@ -45,12 +45,12 @@ public class MAp1 {
         Map<String, Integer> populacaoEstadosNE3 = new TreeMap<>(populacaoEstadosNE);
         System.out.println(populacaoEstadosNE3);
 
-        Map<Integer> populacao = populacaoEstadosNE.values();
+        Collection<Integer> populacao = populacaoEstadosNE.values();
         String estadoMaiorPopulacao = "";
         String estadoMenorPopulacao = "";
         for (Map.Entry<String, Integer> entry : populacaoEstadosNE.entrySet()) {
-            if (entry.getValue().equals(Collections.max(populacao))) estadoMaiorPopulacao = entry.getKey();
-            if (entry.getValue().equals(Collections.min(populacao))) estadoMenorPopulacao = entry.getKey();
+            if (entry.getValue() == Collections.max(populacao)) estadoMaiorPopulacao = entry.getKey();
+            if (entry.getValue() == Collections.min(populacao)) estadoMenorPopulacao = entry.getKey();
         }
         System.out.printf("Exiba o estado com menor população (%s) e seu respectivo valor (%d)\n",
                 estadoMenorPopulacao, Collections.min(populacao));
